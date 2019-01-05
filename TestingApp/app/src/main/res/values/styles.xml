@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="numberStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/numberHeight</item>
+        <item name="android:ems">10</item>
+        <item name="android:background">@color/crystal_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/numberSize</item>
+        <!--<item name="android:digits">0123456789</item>-->
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="operatorStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/numberSize</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="operatorButtonStyle">
+        <item name="android:layout_width">@dimen/padding_xgiant</item>
+        <item name="android:layout_height">@dimen/padding_xgiant</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:background">@color/dark_blue</item>
+        <item name="android:layout_marginEnd">@dimen/padding_medium</item>
+        <item name="android:layout_marginStart">@dimen/padding_medium</item>
+        <item name="android:scaleType">fitCenter</item>
+
+    </style>
+
+</resources>

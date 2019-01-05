@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JobScheduler</string>
+
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="Status">Status</string>
+    <string name="started">Job started</string>
+    <string name="stopped">Job stopped</string>
+    <string name="nothing">Nothing</string>
+</resources>

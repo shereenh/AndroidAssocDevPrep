@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CalcApp</string>
+    <string name="equals">=</string>
+    <string name="add">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+
+    <string name="x">x</string>
+    <string name="y">y</string>
+</resources>
