@@ -6,9 +6,11 @@ import android.arch.paging.LivePagedListBuilder;
 import android.arch.paging.PageKeyedDataSource;
 import android.arch.paging.PagedList;
 
-import com.shereen.paginglibrary.data.ItemDataSource;
-import com.shereen.paginglibrary.middle.ItemDataSourceFactory;
-import com.shereen.paginglibrary.data.entity.Item;
+import com.shereen.paginglibrary.data.Constants;
+import com.shereen.paginglibrary.data.entity.ans.AnsItem;
+import com.shereen.paginglibrary.data.entity.ques.QuesItem;
+import com.shereen.paginglibrary.middle.AnsItemDataSourceFactory;
+import com.shereen.paginglibrary.middle.QuesItemDataSourceFactory;
 
 /**
  * Created by shereen on 1/4/19
@@ -16,21 +18,26 @@ import com.shereen.paginglibrary.data.entity.Item;
 
 public class ItemViewModel extends ViewModel {
 
-    LiveData<PagedList<Item>> itemPagedList;
-    LiveData<PageKeyedDataSource<Integer, Item>> liveDataSource;
+    LiveData<PagedList<AnsItem>> ansItemPagedList;
+    LiveData<PagedList<QuesItem>> quesItemPagedList;
+    LiveData<PageKeyedDataSource<Integer, AnsItem>> ansLiveDataSource;
+    LiveData<PageKeyedDataSource<Integer, QuesItem>> quesLiveDataSource;
 
     public ItemViewModel() {
 
-        ItemDataSourceFactory itemDataSourceFactory = new ItemDataSourceFactory();
-        liveDataSource = itemDataSourceFactory.getItemLiveDataSource();
+        AnsItemDataSourceFactory ansItemDataSourceFactory = new AnsItemDataSourceFactory();
+        QuesItemDataSourceFactory quesItemDataSourceFactory = new QuesItemDataSourceFactory();
+        ansLiveDataSource = ansItemDataSourceFactory.getItemLiveDataSource();
+        quesLiveDataSource = quesItemDataSourceFactory.getItemLiveDataSource();
 
         PagedList.Config config =
                 (new PagedList.Config.Builder())
                         .setEnablePlaceholders(false)
-                        .setPageSize(ItemDataSource.PAGE_SIZE)
+                        .setPageSize(Constants.PAGE_SIZE)
                         .build();
 
-        itemPagedList = (new LivePagedListBuilder(itemDataSourceFactory, config)).build();
+        ansItemPagedList = (new LivePagedListBuilder(ansItemDataSourceFactory, config)).build();
+        quesItemPagedList = (new LivePagedListBuilder(quesItemDataSourceFactory, config)).build();
 
     }
 }

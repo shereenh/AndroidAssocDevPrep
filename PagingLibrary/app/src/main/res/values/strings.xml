@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PagingLibrary</string>
+    <string name="questions">questions</string>
+    <string name="answers">answers</string>
 </resources>
